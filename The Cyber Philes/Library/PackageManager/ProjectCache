@@ -1,25 +1,25 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/linke/Desktop/The-Cyber-Philes/The Cyber Philes/Packages/manifest.json
+    m_FilePath: C:/Users/zombi/Desktop/The-Cyber-Philes/The Cyber Philes/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638946778257759967
-    m_Hash: 2328877387
+      ticks: 638949673701300791
+    m_Hash: 1364188287
   m_LockFileStatus:
-    m_FilePath: C:/Users/linke/Desktop/The-Cyber-Philes/The Cyber Philes/Packages/packages-lock.json
+    m_FilePath: C:/Users/zombi/Desktop/The-Cyber-Philes/The Cyber Philes/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638946778257800438
-    m_Hash: 2376047840
+      ticks: 638949673701313802
+    m_Hash: 4237826723
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: C:/Users/linke/Desktop/The-Cyber-Philes/The Cyber Philes/Packages
+m_ProjectPath: C:/Users/zombi/Desktop/The-Cyber-Philes/The Cyber Philes/Packages
 m_EditorVersion: 6000.2.2f1 (ea398eefe1c2)
 m_ResolvedPackages:
 - packageId: com.unity.ai.assistant@1.0.0-pre.12
@@ -27,7 +27,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0-pre.12
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.ai.assistant@91c166a13c3b
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.ai.assistant@91c166a13c3b
   assetPath: Packages/com.unity.ai.assistant
   name: com.unity.ai.assistant
   displayName: Assistant
@@ -104,14 +104,14 @@ m_ResolvedPackages:
     version: 3.2.1
   - name: com.unity.serialization
     version: 3.1.2
+  - name: com.unity.collections
+    version: 2.5.7
   - name: com.unity.burst
     version: 1.8.24
   - name: com.unity.mathematics
     version: 1.3.2
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
-  - name: com.unity.collections
-    version: 2.5.7
   - name: com.unity.test-framework
     version: 1.5.1
   - name: com.unity.ext.nunit
@@ -179,7 +179,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0-pre.20
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.ai.generators@f55909672e13
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.ai.generators@f55909672e13
   assetPath: Packages/com.unity.ai.generators
   name: com.unity.ai.generators
   displayName: Generators
@@ -317,7 +317,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.3.0
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.ai.inference@4ac711cab9a3
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.ai.inference@4ac711cab9a3
   assetPath: Packages/com.unity.ai.inference
   name: com.unity.ai.inference
   displayName: Inference Engine
@@ -371,8 +371,6 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.dt.app-ui
     version: 1.3.1
-  - name: com.unity.modules.physics
-    version: 1.0.0
   - name: com.unity.modules.androidjni
     version: 1.0.0
   - name: com.unity.modules.uielements
@@ -382,6 +380,8 @@ m_ResolvedPackages:
   - name: com.unity.modules.imgui
     version: 1.0.0
   - name: com.unity.modules.hierarchycore
+    version: 1.0.0
+  - name: com.unity.modules.physics
     version: 1.0.0
   - name: com.unity.modules.screencapture
     version: 1.0.0
@@ -460,7 +460,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.9.3
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.collab-proxy@ab839cc7d2ad
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.collab-proxy@ab839cc7d2ad
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Unity Version Control
@@ -639,7 +639,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.2
   source: 2
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.feature.development@767aadbc6eb7
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.feature.development@767aadbc6eb7
   assetPath: Packages/com.unity.feature.development
   name: com.unity.feature.development
   displayName: Engineering
@@ -750,7 +750,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.14.2
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.inputsystem@be6c4fd0abf5
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.inputsystem@be6c4fd0abf5
   assetPath: Packages/com.unity.inputsystem
   name: com.unity.inputsystem
   displayName: Input System
@@ -908,7 +908,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 5.0.1
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.learn.iet-framework@df95f5ba115b
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.learn.iet-framework@df95f5ba115b
   assetPath: Packages/com.unity.learn.iet-framework
   name: com.unity.learn.iet-framework
   displayName: Tutorial Framework
@@ -1064,7 +1064,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.multiplayer.center@f3fb577b3546
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.multiplayer.center@f3fb577b3546
   assetPath: Packages/com.unity.multiplayer.center
   name: com.unity.multiplayer.center
   displayName: Multiplayer Center
@@ -1160,7 +1160,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 17.2.0
   source: 2
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.render-pipelines.universal@a2829103b3d4
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.render-pipelines.universal@a2829103b3d4
   assetPath: Packages/com.unity.render-pipelines.universal
   name: com.unity.render-pipelines.universal
   displayName: Universal Render Pipeline
@@ -1287,7 +1287,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.8.9
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.timeline@6b9e48457ddb
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.timeline@6b9e48457ddb
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -1485,7 +1485,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.1
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.androidxr-openxr@077cd026549f
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.androidxr-openxr@077cd026549f
   assetPath: Packages/com.unity.xr.androidxr-openxr
   name: com.unity.xr.androidxr-openxr
   displayName: Unity OpenXR Android XR
@@ -1637,7 +1637,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 6.2.0
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.arfoundation@ddd5a77596e0
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.arfoundation@ddd5a77596e0
   assetPath: Packages/com.unity.xr.arfoundation
   name: com.unity.xr.arfoundation
   displayName: AR Foundation
@@ -1934,7 +1934,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.6.1
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.hands@ff73e7abcedb
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.hands@ff73e7abcedb
   assetPath: Packages/com.unity.xr.hands
   name: com.unity.xr.hands
   displayName: XR Hands
@@ -2091,7 +2091,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.2.1
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.interaction.toolkit@76258c00be3e
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.interaction.toolkit@76258c00be3e
   assetPath: Packages/com.unity.xr.interaction.toolkit
   name: com.unity.xr.interaction.toolkit
   displayName: XR Interaction Toolkit
@@ -2318,7 +2318,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 4.5.2
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.management@f589c7ba49ff
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.management@f589c7ba49ff
   assetPath: Packages/com.unity.xr.management
   name: com.unity.xr.management
   displayName: XR Plugin Management
@@ -2490,7 +2490,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.4.0-preview.2
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.mock-hmd@bf4cb37c5d7a
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.mock-hmd@bf4cb37c5d7a
   assetPath: Packages/com.unity.xr.mock-hmd
   name: com.unity.xr.mock-hmd
   displayName: MockHMD XR Plugin
@@ -2616,7 +2616,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.15.1
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.openxr@05fb1a7d75d1
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.openxr@05fb1a7d75d1
   assetPath: Packages/com.unity.xr.openxr
   name: com.unity.xr.openxr
   displayName: OpenXR Plugin
@@ -5546,7 +5546,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.5.2
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.core-utils@5b282bc7378d
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.core-utils@5b282bc7378d
   assetPath: Packages/com.unity.xr.core-utils
   name: com.unity.xr.core-utils
   displayName: XR Core Utilities
@@ -5679,7 +5679,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.1.12
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.legacyinputhelpers@b7579e86f3b4
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.xr.legacyinputhelpers@b7579e86f3b4
   assetPath: Packages/com.unity.xr.legacyinputhelpers
   name: com.unity.xr.legacyinputhelpers
   displayName: XR Legacy Input Helpers
@@ -5807,7 +5807,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.0
   source: 2
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.ugui@754dbde2be27
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.ugui@754dbde2be27
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI
@@ -5903,7 +5903,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.3.2
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.mathematics@8017b507cc74
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.mathematics@8017b507cc74
   assetPath: Packages/com.unity.mathematics
   name: com.unity.mathematics
   displayName: Mathematics
@@ -6002,7 +6002,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.editorcoroutines@7d48783e7b8c
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.editorcoroutines@7d48783e7b8c
   assetPath: Packages/com.unity.editorcoroutines
   name: com.unity.editorcoroutines
   displayName: Editor Coroutines
@@ -6091,7 +6091,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.2.0
   source: 2
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.render-pipelines.core@5e056b397fc0
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.render-pipelines.core@5e056b397fc0
   assetPath: Packages/com.unity.render-pipelines.core
   name: com.unity.render-pipelines.core
   displayName: Scriptable Render Pipeline Core
@@ -6217,7 +6217,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.2.0
   source: 2
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.shadergraph@287dd3fa176c
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.shadergraph@287dd3fa176c
   assetPath: Packages/com.unity.shadergraph
   name: com.unity.shadergraph
   displayName: Shader Graph
@@ -6333,7 +6333,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.0.3
   source: 2
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.render-pipelines.universal-config@8dc1aab4af1d
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.render-pipelines.universal-config@8dc1aab4af1d
   assetPath: Packages/com.unity.render-pipelines.universal-config
   name: com.unity.render-pipelines.universal-config
   displayName: Universal Render Pipeline Config
@@ -6441,7 +6441,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.1.0
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.settings-manager@41738c275190
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.settings-manager@41738c275190
   assetPath: Packages/com.unity.settings-manager
   name: com.unity.settings-manager
   displayName: Settings Manager
@@ -6528,7 +6528,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.23
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.ide.visualstudio@198cdf337d13
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.ide.visualstudio@198cdf337d13
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -6644,7 +6644,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 3.0.36
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.ide.rider@4d374c7eb6db
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.ide.rider@4d374c7eb6db
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -6777,7 +6777,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.2.3
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997
   assetPath: Packages/com.unity.performance.profile-analyzer
   name: com.unity.performance.profile-analyzer
   displayName: Profile Analyzer
@@ -6872,7 +6872,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.5.1
   source: 2
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.test-framework@a6f5be5f149c
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.test-framework@a6f5be5f149c
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -6962,7 +6962,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.2.6
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.testtools.codecoverage@205a02cbcb39
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.testtools.codecoverage@205a02cbcb39
   assetPath: Packages/com.unity.testtools.codecoverage
   name: com.unity.testtools.codecoverage
   displayName: Code Coverage
@@ -7097,7 +7097,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.8.24
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.burst@f7a407abf4d5
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.burst@f7a407abf4d5
   assetPath: Packages/com.unity.burst
   name: com.unity.burst
   displayName: Burst
@@ -7332,7 +7332,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.3.1
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.dt.app-ui@7b87c8225c06
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.dt.app-ui@7b87c8225c06
   assetPath: Packages/com.unity.dt.app-ui
   name: com.unity.dt.app-ui
   displayName: App UI
@@ -7466,17 +7466,15 @@ m_ResolvedPackages:
     recommended: 1.3.1
     deprecated: []
   dependencies:
-  - name: com.unity.modules.physics
-    version: 1.0.0
   - name: com.unity.modules.androidjni
     version: 1.0.0
   - name: com.unity.modules.uielements
     version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
   - name: com.unity.modules.screencapture
     version: 1.0.0
   resolvedDependencies:
-  - name: com.unity.modules.physics
-    version: 1.0.0
   - name: com.unity.modules.androidjni
     version: 1.0.0
   - name: com.unity.modules.uielements
@@ -7488,6 +7486,8 @@ m_ResolvedPackages:
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   - name: com.unity.modules.hierarchycore
+    version: 1.0.0
+  - name: com.unity.modules.physics
     version: 1.0.0
   - name: com.unity.modules.screencapture
     version: 1.0.0
@@ -7523,7 +7523,7 @@ m_ResolvedPackages:
       violations: []
   hideInEditor: 1
   entitlements:
-    licensingModel: 1
+    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 638887003362730000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.dt.app-ui@1.3/manual/index.html
@@ -7565,7 +7565,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.5.7
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.collections@d49facba0036
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.collections@d49facba0036
   assetPath: Packages/com.unity.collections
   name: com.unity.collections
   displayName: Collections
@@ -7755,7 +7755,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0-pre.20
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.ai.toolkit@48a271771d1a
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.ai.toolkit@48a271771d1a
   assetPath: Packages/com.unity.ai.toolkit
   name: com.unity.ai.toolkit
   displayName: AI Toolkit
@@ -7873,7 +7873,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 3.2.1
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.nuget.newtonsoft-json@74deb55db2a0
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.nuget.newtonsoft-json@74deb55db2a0
   assetPath: Packages/com.unity.nuget.newtonsoft-json
   name: com.unity.nuget.newtonsoft-json
   displayName: Newtonsoft Json
@@ -7974,7 +7974,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 3.1.2
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.serialization@582cbf30bbfd
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.serialization@582cbf30bbfd
   assetPath: Packages/com.unity.serialization
   name: com.unity.serialization
   displayName: Serialization
@@ -7983,7 +7983,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: asset
+  type: 
   description: Use Unity's Serialization to serialize and deserialize from/to JSON
     and Binary formats.
   errors: []
@@ -8034,19 +8034,19 @@ m_ResolvedPackages:
     recommended: 3.1.2
     deprecated: []
   dependencies:
-  - name: com.unity.burst
-    version: 1.7.2
   - name: com.unity.collections
     version: 2.4.2
+  - name: com.unity.burst
+    version: 1.7.2
   resolvedDependencies:
+  - name: com.unity.collections
+    version: 2.5.7
   - name: com.unity.burst
     version: 1.8.24
   - name: com.unity.mathematics
     version: 1.3.2
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
-  - name: com.unity.collections
-    version: 2.5.7
   - name: com.unity.test-framework
     version: 1.5.1
   - name: com.unity.ext.nunit
@@ -8075,7 +8075,7 @@ m_ResolvedPackages:
       violations: []
   hideInEditor: 1
   entitlements:
-    licensingModel: 1
+    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 638599246800000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.serialization@3.1/manual/index.html
@@ -8119,7 +8119,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 4.9.3
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.searcher@1e17ce91558d
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.searcher@1e17ce91558d
   assetPath: Packages/com.unity.searcher
   name: com.unity.searcher
   displayName: Searcher
@@ -8216,7 +8216,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.1
   source: 2
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.rendering.light-transport@2c9279f90d7c
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.rendering.light-transport@2c9279f90d7c
   assetPath: Packages/com.unity.rendering.light-transport
   name: com.unity.rendering.light-transport
   displayName: Unity Light Transport Library
@@ -8322,7 +8322,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.5
   source: 2
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.ext.nunit@031a54704bff
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.ext.nunit@031a54704bff
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit
@@ -8402,7 +8402,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.11.5
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.nuget.mono-cecil@d78732e851eb
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.nuget.mono-cecil@d78732e851eb
   assetPath: Packages/com.unity.nuget.mono-cecil
   name: com.unity.nuget.mono-cecil
   displayName: Mono Cecil
@@ -8495,7 +8495,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 3.1.0
   source: 1
-  resolvedPath: C:\Users\linke\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.test-framework.performance@92d1d09a72ed
+  resolvedPath: C:\Users\zombi\Desktop\The-Cyber-Philes\The Cyber Philes\Library\PackageCache\com.unity.test-framework.performance@92d1d09a72ed
   assetPath: Packages/com.unity.test-framework.performance
   name: com.unity.test-framework.performance
   displayName: Performance testing API
