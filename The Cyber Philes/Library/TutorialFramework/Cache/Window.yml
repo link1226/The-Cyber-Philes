@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Tutorials.Core.Editor::Unity.Tutorials.Core.Editor.WindowCache
   CurrentView: TableOfContent
-  PreviousView: 
+  PreviousView: TableOfContent
   DomainReloadOccured: 1
   IsOpen: 1
   IsFaqOpen: 0
   AreTestsRunning: 0
   CurrentTutorial: {fileID: 0}
-  PlayModeChanging: 0
+  PlayModeChanging: 1
   ActiveScenesBeforeTutorialStarted: []
   SceneViewStateBeforeTutorialStarted:
     In2DMode: 0
