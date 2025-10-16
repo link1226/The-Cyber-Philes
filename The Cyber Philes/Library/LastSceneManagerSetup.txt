@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Office Environment.unity
+- path: Assets/Keypad/Scenes/ExampleScene/Keypad_DoorExampleScene_Urp.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
