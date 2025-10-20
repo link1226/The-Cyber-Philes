@@ -19,6 +19,8 @@ public class UIScreenManager : MonoBehaviour
     private VisualElement root;
     private string currentScreen;
 
+    private string webPassword = "123";
+
     void Awake()
     {
         doc = GetComponent<UIDocument>();
@@ -74,16 +76,85 @@ public class UIScreenManager : MonoBehaviour
                 };
                 break;
 
-            case "1110":
+            case "1110": // FileFind
                 root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
                 root.Q<Button>("2faButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1121"));
                 root.Q<Button>("passcodeButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1122"));
                 break;
 
             case "1121":
-            case "1122":
+            case "1122": // TextView
                 root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1110"));
                 root.Q<Button>("CloseButtonBoth")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
+                break;
+
+            case "1130":
+            case "1131": // Web login
+                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
+                root.Q<Button>("ResetButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1132"));
+
+                var login = root.Q<Button>("LoginButton");
+                var pwf = root.Q<TextField>("PasswordField");
+                login.clicked += () =>
+                {
+                    if (pwf.value.Equals(webPassword))
+                        ShowScreen("1139"); // 2FA
+                    else
+                        ShowScreen("1131"); // Incorrect login
+                };
+                break;
+
+            case "1132": // Web Security Q
+                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
+                var verify = root.Q<Button>("VerifyButton");
+                var secq = root.Q<TextField>("SecurityField");
+                verify.clicked += () =>
+                {
+                    if (secq.value == "cat")
+                        ShowScreen("1134"); // Reset password
+                    else
+                        ShowScreen("1133"); // No auth
+                };
+                break;
+
+            case "1133": // Web No Authentication
+                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
+                root.Q<Button>("ReturnButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1130"));
+                break;
+
+                case "1134": // Web Set Password
+                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
+                var set = root.Q<Button>("SetButton");
+                var np = root.Q<TextField>("NewPasswordField");
+                var npv = root.Q<TextField>("NewPasswordVerifyField");
+                set.clicked += () =>
+                {
+                    if (np.value.Equals(npv.value))
+                    {
+                        // Set password - NO REQUIREMENTS CHECK
+                        webPassword = np.value;
+                        ShowScreen("1139"); // 2FA
+                    }
+                    else
+                        ShowScreen("1134"); // TODO: Change to "Passwords don't match"
+                };
+                break;
+
+            case "1139": // Web 2FA
+                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
+                var verify2 = root.Q<Button>("VerifyButton");
+                var code = root.Q<TextField>("CodeField");
+                verify2.clicked += () =>
+                {
+                    if (code.value.Equals("557602")) // TODO: CHANGE to patch Phone App
+                        ShowScreen("1140"); // Successful Login
+                    else
+                        ShowScreen("1133"); // No auth
+                };
+                break;
+
+            case "1140": // Company Drive Website
+                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
                 break;
         }
     }
