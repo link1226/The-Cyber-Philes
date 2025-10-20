@@ -2,6 +2,8 @@
     <ui:Template name="Dock" src="project://database/Assets/PC-UI/UXML/Templates/Dock.uxml?fileID=9197481963319205126&amp;guid=d7ccbf193f40943fdb7630276af59503&amp;type=3#Dock" />
     <ui:VisualElement style="flex-grow: 1; flex-direction: row-reverse; background-image: url(&quot;project://database/Assets/PC-UI/Images/1110.png?fileID=2800000&amp;guid=e09fc2f126a8643bc9664b32f04dd844&amp;type=3#1110&quot;); position: absolute; width: 800px; height: 600px; top: 0; left: 0;">
         <ui:Button text="X" name="CloseButton" style="position: absolute; top: 59px; left: 634px; opacity: 0;" />
+        <ui:Button text="2fa" name="2faButton" style="opacity: 0; position: absolute; top: 140px; left: 263px; height: 90px; width: 93px;" />
+        <ui:Button text="passcode" name="passcodeButton" style="opacity: 0; position: absolute; top: 140px; left: 360px; height: 90px; width: 93px;" />
     </ui:VisualElement>
     <ui:Instance template="Dock" style="opacity: 1;" />
 </ui:UXML>
