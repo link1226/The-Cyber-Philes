@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="Dock" src="project://database/Assets/PC-UI/UXML/Templates/Dock.uxml?fileID=9197481963319205126&amp;guid=d7ccbf193f40943fdb7630276af59503&amp;type=3#Dock" />
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row-reverse; background-image: url(&quot;project://database/Assets/PC-UI/Images/1150.png?fileID=2800000&amp;guid=2eac4f0ac65d747db91ae526f34cea85&amp;type=3#1150&quot;); position: absolute; width: 800px; height: 600px; top: 0; left: 0;">
+        <ui:Button text="X" name="CloseButton" style="position: absolute; top: 45px; left: 720px; opacity: 0;" />
+        <ui:Button text="Local Password Entry" name="LocalButton" style="position: absolute; top: 167px; left: 20px; opacity: 0; width: 739px;" />
+        <ui:Button text="Passcord Password Entry" name="PasscodeButton" style="position: absolute; top: 206px; left: 20px; opacity: 0; width: 739px;" />
+        <ui:Button text="CompanyDrive Password Entry" name="CompDriveButton" style="position: absolute; top: 245px; left: 20px; opacity: 0; width: 739px;" />
+    </ui:VisualElement>
+    <ui:Instance template="Dock" style="opacity: 1;" />
+</ui:UXML>

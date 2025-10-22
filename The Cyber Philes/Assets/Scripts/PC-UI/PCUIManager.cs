@@ -156,6 +156,21 @@ public class UIScreenManager : MonoBehaviour
             case "1140": // Company Drive Website
                 root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
                 break;
+
+            case "1150": // Password Manager
+                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
+                root.Q<Button>("LocalButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1151"));
+                root.Q<Button>("PasscodeButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1152"));
+                root.Q<Button>("CompDriveButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1153"));
+                break;
+
+            case "1151": // Password Entries
+            case "1152":
+            case "1153":
+                root.Q<Button>("CloseButtonBoth")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
+                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1150"));
+                root.Q<Button>("OKButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1150"));
+                break;
         }
     }
 }
