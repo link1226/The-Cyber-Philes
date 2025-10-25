@@ -1,0 +1,8 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="TheDock" style="flex-grow: 1; opacity: 0;">
+        <ui:Button text="FileFind" name="DockFileFindButton" style="position: absolute; top: 498px; left: 105px; height: 100px; width: 100px; opacity: 1;" />
+        <ui:Button text="WWWB" name="DockWebBrowserButton" style="position: absolute; top: 498px; left: 205px; height: 100px; width: 100px; opacity: 1;" />
+        <ui:Button text="PassMan" name="DockPasswordManButton" style="position: absolute; top: 498px; left: 305px; height: 100px; width: 100px; opacity: 1;" />
+        <ui:Button text="TextView" name="DockTextViewButton" style="position: absolute; top: 498px; left: 405px; height: 100px; width: 100px; opacity: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="Dock" src="project://database/Assets/PC-UI/UXML/Templates/Dock.uxml?fileID=9197481963319205126&amp;guid=d7ccbf193f40943fdb7630276af59503&amp;type=3#Dock" />
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row-reverse; background-image: url(&quot;project://database/Assets/PC-UI/Images/1139.png?fileID=2800000&amp;guid=3577c458421794961ae0e3f9e8cf8f7b&amp;type=3#1139&quot;); position: absolute; width: 800px; height: 600px; top: 0; left: 0;">
+        <ui:Button text="X" name="CloseButton" style="position: absolute; top: 59px; left: 694px; opacity: 0;" />
+        <ui:TextField password="true" name="CodeField" style="position: absolute; top: 340px; left: 54px; height: 40px; width: 367px;" />
+        <ui:Button text="Verify" name="VerifyButton" style="position: absolute; top: 405px; left: 281px; height: 28px; width: 142px; border-left-color: rgb(2, 113, 189); border-right-color: rgb(2, 113, 189); border-top-color: rgb(2, 113, 189); border-bottom-color: rgb(2, 113, 189); background-color: rgb(255, 255, 255); -unity-font-definition: url(&quot;project://database/Assets/Fonts/Source_Code_Pro/static/SourceCodePro-SemiBold.ttf?fileID=12800000&amp;guid=5f0e9c5746d924bfaa3d4afb104a8240&amp;type=3#SourceCodePro-SemiBold&quot;); font-size: 24px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; border-top-width: 1.5px; border-right-width: 1.5px; border-bottom-width: 1.5px; border-left-width: 1.5px; opacity: 1;" />
+    </ui:VisualElement>
+    <ui:Instance template="Dock" style="opacity: 1;" />
+</ui:UXML>
