@@ -21,6 +21,9 @@ public class UIScreenManager : MonoBehaviour
 
     private string webPassword = "123";
 
+    [Header("Keyboard Connector")]
+    public UIToolkitKeyboardConnector keyboardConnector;
+
     void Awake()
     {
         doc = GetComponent<UIDocument>();
@@ -46,6 +49,10 @@ public class UIScreenManager : MonoBehaviour
 
         // Re-bind buttons for this screen
         WireButtons(name);
+
+        // Re-register text fields with keyboard
+        if (keyboardConnector != null)
+            keyboardConnector.RegisterTextFields(root);
     }
 
     private void WireButtons(string screenName)
