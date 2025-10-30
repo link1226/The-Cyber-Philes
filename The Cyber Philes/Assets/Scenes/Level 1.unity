@@ -3185,7 +3185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIToolkitKeyboardConnector
   uiDocuments:
-  - {fileID: 0}
+  - {fileID: 812502907}
   debugLogs: 0
 --- !u!4 &858633408
 Transform:
@@ -4031,7 +4031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dbc60382c9e1bc4f903d7a6cd426367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CountdownTimer
-  startSeconds: 10
+  startSeconds: 10000
 --- !u!114 &1029337272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7400,6 +7400,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1049448872}
     m_Modifications:
+    - target: {fileID: 2643735348139780013, guid: 1f1a08a56a9c158499ae89123bb9cd31, type: 3}
+      propertyPath: m_LODs.Array.data[2].screenRelativeHeight
+      value: 0.027210113
+      objectReference: {fileID: 0}
     - target: {fileID: 5826595298834687482, guid: 1f1a08a56a9c158499ae89123bb9cd31, type: 3}
       propertyPath: m_RootOrder
       value: 46
