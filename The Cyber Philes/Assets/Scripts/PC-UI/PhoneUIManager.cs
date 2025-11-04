@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System.Collections.Generic;
 
-public class UIScreenManager : MonoBehaviour
+public class UISPhonenManager : MonoBehaviour
 {
     [System.Serializable]
     public struct ScreenLink
@@ -30,7 +30,7 @@ public class UIScreenManager : MonoBehaviour
         foreach (var s in screens)
             lookup[s.name] = s.asset;
 
-        ShowScreen("1010");
+        ShowScreen("1200");
     }
 
     public void ShowScreen(string name)
@@ -59,16 +59,20 @@ public class UIScreenManager : MonoBehaviour
         if (!screenName.Equals("1010") && !screenName.Equals("1011"))
         {
             // Show dock on all screens not the login screen
-            root.Q<Button>("DockFileFindButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1110"));
-            root.Q<Button>("DockWebBrowserButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1130"));
-            root.Q<Button>("DockPasswordManButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1150"));
-            root.Q<Button>("DockTextViewButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1122"));
+            
         }
 
         // Add buttons for each screen
         switch (screenName)
         {
-            case "1010": // PC Login
+            case "1200": // Lock screen
+                root.Q<Button>("ScreenTap")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1201"));
+                break;
+            case "1201": // Passcode screen
+                root.Q<Label>("Code").text = "123";
+                root.Q<Button>("Back")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1200"));
+                break;
+                
             case "1011":
                 var ok = root.Q<Button>("OKButton");
                 var pw = root.Q<TextField>("PasswordField");
