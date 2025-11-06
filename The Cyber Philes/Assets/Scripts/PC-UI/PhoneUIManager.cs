@@ -59,7 +59,7 @@ public class UISPhonenManager : MonoBehaviour
         if (!screenName.Equals("1010") && !screenName.Equals("1011"))
         {
             // Show dock on all screens not the login screen
-            
+
         }
 
         // Add buttons for each screen
@@ -68,118 +68,63 @@ public class UISPhonenManager : MonoBehaviour
             case "1200": // Lock screen
                 root.Q<Button>("ScreenTap")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1201"));
                 break;
+
             case "1201": // Passcode screen
-                root.Q<Label>("Code").text = "123";
+                root.Q<Label>("Code").text = "";
                 root.Q<Button>("Back")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1200"));
-                break;
-                
-            case "1011":
-                var ok = root.Q<Button>("OKButton");
-                var pw = root.Q<TextField>("PasswordField");
+
+                var codeLabel = root.Q<Label>("Code");
+
+                string[] buttonNames =
+                {
+                    "Zero", "One", "Two", "Three", "Four",
+                    "Five", "Six", "Seven", "Eight", "Nine"
+                };
+
+                for (int i = 0; i < buttonNames.Length; i++)
+                {
+                    var button = root.Q<Button>(buttonNames[i]);
+                    if (button == null) continue;
+
+                    int num = i; // capture loop variable
+                    button.RegisterCallback<ClickEvent>(_ =>
+                    {
+                        if (codeLabel.text.Length < 6)
+                            codeLabel.text += num.ToString();
+                    });
+                }
+
+                var ok = root.Q<Button>("OK");
                 ok.clicked += () =>
                 {
-                    if (pw.value == LevelManager.Instance.pcPassword)
-                        ShowScreen("1100"); // Desktop
+                    if (codeLabel.text == LevelManager.Instance.phonePasscode)
+                        ShowScreen("1210"); // Home screen
                     else
-                        ShowScreen("1011"); // Incorrect login
+                        ShowScreen("1201"); // Incorrect login
                 };
                 break;
 
-            case "1110": // FileFind
-                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
-                root.Q<Button>("2faButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1121"));
-                root.Q<Button>("passcodeButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1122"));
-                break;
 
-            case "1121":
-            case "1122": // TextView
-                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1110"));
-                root.Q<Button>("CloseButtonBoth")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
-                break;
-
-            case "1130":
-            case "1131": // Web login
-                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
-                root.Q<Button>("ResetButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1132"));
-
-                var login = root.Q<Button>("LoginButton");
-                var pwf = root.Q<TextField>("PasswordField");
-                login.clicked += () =>
-                {
-                    if (pwf.value.Equals(LevelManager.Instance.webPassword))
-                        ShowScreen("1139"); // 2FA
-                    else
-                        ShowScreen("1131"); // Incorrect login
-                };
-                break;
-
-            case "1132": // Web Security Q
-                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
-                var verify = root.Q<Button>("VerifyButton");
-                var secq = root.Q<TextField>("SecurityField");
-                verify.clicked += () =>
-                {
-                    if (secq.value == "cat")
-                        ShowScreen("1134"); // Reset password
-                    else
-                        ShowScreen("1133"); // No auth
-                };
-                break;
-
-            case "1133": // Web No Authentication
-                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
-                root.Q<Button>("ReturnButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1130"));
-                break;
-
-                case "1134": // Web Set Password
-                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
-                var set = root.Q<Button>("SetButton");
-                var np = root.Q<TextField>("NewPasswordField");
-                var npv = root.Q<TextField>("NewPasswordVerifyField");
-                set.clicked += () =>
-                {
-                    if (np.value.Equals(npv.value))
-                    {
-                        // Set password - NO REQUIREMENTS CHECK
-                        LevelManager.Instance.webPassword = np.value;
-                        ShowScreen("1139"); // 2FA
-                    }
-                    else
-                        ShowScreen("1134"); // TODO: Change to "Passwords don't match"
-                };
-                break;
-
-            case "1139": // Web 2FA
-                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
-                var verify2 = root.Q<Button>("VerifyButton");
-                var code = root.Q<TextField>("CodeField");
-                verify2.clicked += () =>
-                {
-                    if (code.value.Equals(LevelManager.Instance.twoFACode)) 
-                        ShowScreen("1140"); // Successful Login
-                    else
-                        ShowScreen("1133"); // No auth
-                };
-                break;
-
-            case "1140": // Company Drive Website
-                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
-                break;
-
-            case "1150": // Password Manager
-                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
-                root.Q<Button>("LocalButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1151"));
-                root.Q<Button>("PasscodeButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1152"));
-                root.Q<Button>("CompDriveButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1153"));
-                break;
-
-            case "1151": // Password Entries
-            case "1152":
-            case "1153":
-                root.Q<Button>("CloseButtonBoth")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
-                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1150"));
-                root.Q<Button>("OKButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1150"));
+            case "1210": // Home Screen
+                root.Q<Button>("Auth")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1220"));
                 break;
         }
     }
+
+    void Update()
+    {
+        if (currentScreen == "1220")
+        {
+            string code = LevelManager.Instance.twoFACode;
+
+            // Must be 6 digits
+            if (!string.IsNullOrEmpty(code) && code.Length == 6)
+            {
+                code = code.Insert(3, " "); // Puts in middle space
+            }
+
+            root.Q<Label>("Code").text = code;
+        }
+    }
+
 }
