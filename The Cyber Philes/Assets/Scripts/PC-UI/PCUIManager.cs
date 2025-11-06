@@ -115,7 +115,7 @@ public class UIScreenManager : MonoBehaviour
                 var secq = root.Q<TextField>("SecurityField");
                 verify.clicked += () =>
                 {
-                    if (secq.value == "cat")
+                    if (secq.value == LevelManager.Instance.securityQuestion)
                         ShowScreen("1134"); // Reset password
                     else
                         ShowScreen("1133"); // No auth

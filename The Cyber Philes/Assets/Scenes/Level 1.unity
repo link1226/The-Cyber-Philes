@@ -4180,10 +4180,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   pcPassword: 321
-  webPassword: tobechanged
-  phonePasscode: 987654
-  twoFACode: 123123
-  doorPasscode: 
+  webPassword: tobechangedbyuser
+  securityQuestion: Happy
+  phonePasscode: 147258
+  twoFACode: 000000
+  doorPasscode: 000000000
 --- !u!4 &1024959875
 Transform:
   m_ObjectHideFlags: 0
