@@ -15,6 +15,9 @@ public class LevelManager : MonoBehaviour
 
     void Awake()
     {
+        GenerateTwoFACode();
+
+        
         // Ensure only one instance exists
         if (Instance == null)
         {
@@ -26,6 +29,19 @@ public class LevelManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private float timer = 0;
+
+    void Update()
+    {
+        timer += Time.deltaTime;
+        if (timer >= 15f)
+        {
+            timer = 0f;
+            GenerateTwoFACode();
+        }
+    }
+
 
     // Generate or reset codes here
     public void GenerateTwoFACode()
