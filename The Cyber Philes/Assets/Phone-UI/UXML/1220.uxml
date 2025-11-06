@@ -1,0 +1,7 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Bg" style="flex-grow: 1; background-color: rgb(255, 255, 255);" />
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row-reverse; background-image: url(&quot;project://database/Assets/Phone-UI/Images/1220.png?fileID=2800000&amp;guid=462f91b7f274845f2aac956bbe8754e0&amp;type=3#1220&quot;); position: absolute; width: 450px; height: 800px; top: 0; left: 0;">
+        <ui:VisualElement style="flex-grow: 1; position: absolute; background-color: rgb(255, 255, 255); height: 66px; width: 293px; left: 16px; top: 212px;" />
+        <ui:Label text="123 456" name="Code" style="position: absolute; top: 199px; left: 16px; color: rgb(42, 170, 225); -unity-font-definition: url(&quot;project://database/Assets/Fonts/Source_Code_Pro/static/SourceCodePro-Regular.ttf?fileID=12800000&amp;guid=a3ef5e5a739ce4e98a4a567e43648b83&amp;type=3#SourceCodePro-Regular&quot;); font-size: 52px;" />
+    </ui:VisualElement>
+</ui:UXML>

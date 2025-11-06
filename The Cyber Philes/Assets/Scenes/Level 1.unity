@@ -310,6 +310,10 @@ MonoBehaviour:
     asset: {fileID: 9197481963319205126, guid: 6ba744ef37a3147fab7f300ebbcb1be9, type: 3}
   - name: 1201
     asset: {fileID: 9197481963319205126, guid: 50732e5c1e94743c08eee36a0231b17c, type: 3}
+  - name: 1210
+    asset: {fileID: 9197481963319205126, guid: 9ac343629126e4b53a83f388abf4894a, type: 3}
+  - name: 1220
+    asset: {fileID: 9197481963319205126, guid: cc45d7362546449fe9de4585775383a2, type: 3}
   keyboardConnector: {fileID: 0}
 --- !u!4 &16693563 stripped
 Transform:

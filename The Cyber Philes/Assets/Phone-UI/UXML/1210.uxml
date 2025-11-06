@@ -1,0 +1,5 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row-reverse; background-image: url(&quot;project://database/Assets/Phone-UI/Images/1210.png?fileID=2800000&amp;guid=94681c5789d51461d9031633156c2d87&amp;type=3#1210&quot;); position: absolute; width: 450px; height: 800px; top: 0; left: 0;">
+        <ui:Button text="Auth App" name="Auth" style="position: absolute; top: 520px; left: 165px; height: 121px; width: 115px; opacity: 0;" />
+    </ui:VisualElement>
+</ui:UXML>
