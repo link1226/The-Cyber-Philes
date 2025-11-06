@@ -92,6 +92,15 @@ public class UIScreenManager : MonoBehaviour
                 root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1110"));
                 root.Q<Button>("CloseButtonBoth")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
                 break;
+            case "1125": // TextView DoorCode
+                string doorCode = LevelManager.Instance.doorPasscode;
+                doorCode = doorCode.Insert(6, " "); // Puts in middle space
+                doorCode = doorCode.Insert(3, " "); // Puts in middle space
+
+                root.Q<Label>("DoorCode").text = doorCode;
+                root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1140"));
+                root.Q<Button>("CloseButtonBoth")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
+                break;
 
             case "1130":
             case "1131": // Web login
@@ -160,6 +169,7 @@ public class UIScreenManager : MonoBehaviour
 
             case "1140": // Company Drive Website
                 root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1100"));
+                root.Q<Button>("DoorCodeButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("1125"));
                 break;
 
             case "1150": // Password Manager
