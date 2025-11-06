@@ -7,6 +7,8 @@ public class CountdownTimer : MonoBehaviour
     [Tooltip("Countdown duration in seconds.")]
     public float startSeconds = 300f; // 5 minutes by default
 
+    public NavKeypad.Keypad keypad;
+
     private float timeRemaining;
     private Label timerLabel;
     private bool timerRunning = true;
@@ -22,6 +24,9 @@ public class CountdownTimer : MonoBehaviour
 
     void Update()
     {
+        if (keypad.accessWasGranted)
+            timerRunning = false;
+
         if (!timerRunning) return;
 
         timeRemaining -= Time.deltaTime;

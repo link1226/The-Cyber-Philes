@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
     [Header("Computer Data")]
     public string pcPassword;
     public string webPassword;
+    public string securityQuestion;
 
     [Header("Shared Game Data")]
     public string phonePasscode;
@@ -15,6 +16,9 @@ public class LevelManager : MonoBehaviour
 
     void Awake()
     {
+        GenerateDoorCode();
+        GenerateTwoFACode();
+
         // Ensure only one instance exists
         if (Instance == null)
         {
@@ -27,10 +31,29 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    private float timer = 0;
+
+    void Update()
+    {
+        timer += Time.deltaTime;
+        if (timer >= 15f)
+        {
+            timer = 0f;
+            GenerateTwoFACode();
+        }
+    }
+
+
     // Generate or reset codes here
     public void GenerateTwoFACode()
     {
         twoFACode = Random.Range(100000, 999999).ToString();
         Debug.Log($"New 2FA Code: {twoFACode}");
+    }
+
+    private void GenerateDoorCode()
+    {
+        doorPasscode = Random.Range(100000000, 999999999).ToString();
+        Debug.Log($"New Door Code: {doorPasscode}");
     }
 }

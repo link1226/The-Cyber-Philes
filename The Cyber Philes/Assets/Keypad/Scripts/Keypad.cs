@@ -11,8 +11,8 @@ namespace NavKeypad
         [Header("Events")]
         [SerializeField] private UnityEvent onAccessGranted;
         [SerializeField] private UnityEvent onAccessDenied;
-        [Header("Combination Code (9 Numbers Max)")]
-        [SerializeField] private int keypadCombo = 12345;
+        //[Header("Combination Code (9 Numbers Max)")]
+        //[SerializeField] private int keypadCombo = 12345;
 
         public UnityEvent OnAccessGranted => onAccessGranted;
         public UnityEvent OnAccessDenied => onAccessDenied;
@@ -41,7 +41,7 @@ namespace NavKeypad
 
         private string currentInput;
         private bool displayingResult = false;
-        private bool accessWasGranted = false;
+        public bool accessWasGranted = false;
 
         private void Awake()
         {
@@ -73,17 +73,22 @@ namespace NavKeypad
         }
         public void CheckCombo()
         {
-            if (int.TryParse(currentInput, out var currentKombo))
+            //if (int.TryParse(currentInput, out var currentKombo))
+            //{
+            //    bool granted = currentKombo == LevelManager.Instance.doorPasscode;
+            //    if (!displayingResult)
+            //    {
+            //        StartCoroutine(DisplayResultRoutine(granted));
+            //    }
+            //}
+            //else
+            //{
+            //    Debug.LogWarning("Couldn't process input for some reason..");
+            //}
+            bool granted = currentInput == LevelManager.Instance.doorPasscode;
+            if (!displayingResult)
             {
-                bool granted = currentKombo == keypadCombo;
-                if (!displayingResult)
-                {
-                    StartCoroutine(DisplayResultRoutine(granted));
-                }
-            }
-            else
-            {
-                Debug.LogWarning("Couldn't process input for some reason..");
+                StartCoroutine(DisplayResultRoutine(granted));
             }
 
         }
