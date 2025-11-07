@@ -17,6 +17,7 @@ public class LevelManager : MonoBehaviour
     void Awake()
     {
         GenerateDoorCode();
+        GeneratePhoneCode();
         GenerateTwoFACode();
         
         // Ensure only one instance exists
@@ -48,12 +49,15 @@ public class LevelManager : MonoBehaviour
     public void GenerateTwoFACode()
     {
         twoFACode = Random.Range(100000, 999999).ToString();
-        Debug.Log($"New 2FA Code: {twoFACode}");
+    }
+
+     private void GeneratePhoneCode()
+    {
+        phonePasscode = Random.Range(100000, 999999).ToString();
     }
 
      private void GenerateDoorCode()
     {
         doorPasscode = Random.Range(100000000, 999999999).ToString();
-        Debug.Log($"New Door Code: {doorPasscode}");
     }
 }
