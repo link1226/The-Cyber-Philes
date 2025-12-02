@@ -44,17 +44,22 @@ public class WinLevelMenu : MonoBehaviour
     private void OnNextLevel(ClickEvent evt)
     {
         int current = SceneManager.GetActiveScene().buildIndex;
-        int next = current + 1;
+        int next = current + 2;
 
         if (next < SceneManager.sceneCountInBuildSettings)
             SceneManager.LoadScene(next);
         else
+        {
             Debug.LogWarning("No next scene found in Build Settings.");
+            SceneManager.LoadScene(0);
+        }
+        
     }
 
     private void OnReplayLevel(ClickEvent evt)
     {
-        SceneManager.LoadScene(1);
+        int current = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(current - 1);
     }
 
     private void OnMainMenu(ClickEvent evt)

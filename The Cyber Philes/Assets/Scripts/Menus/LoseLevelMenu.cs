@@ -39,7 +39,8 @@ public class LoseLevelMenu : MonoBehaviour
 
     private void OnReplayLevel(ClickEvent evt)
     {
-        SceneManager.LoadScene(1);
+        int current = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(current - 2);
     }
 
     private void OnMainMenu(ClickEvent evt)
