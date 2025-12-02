@@ -242,6 +242,8 @@ using UnityEngine.UIElements;
 
 public class MenuManager : MonoBehaviour
 {
+    public static MenuManager Instance;
+
     [Header("UI Document")]
     public UIDocument uiDocument;
 
@@ -249,9 +251,13 @@ public class MenuManager : MonoBehaviour
     public VisualElement startMenu;
     public VisualElement optionsMenu;
     public VisualElement aboutMenu;
+    public VisualElement startSubmenu;
 
     private Slider volumeSlider;
     private const string VolumePref = "UserVolume";
+
+    // bool to control Level 2 visiblity in menu
+    //public bool unlockedLevel2 = false;
 
     private void Start()
     {
@@ -272,12 +278,18 @@ public class MenuManager : MonoBehaviour
         if (startMenu == null) startMenu = root.Q<VisualElement>("StartMenu");
         if (optionsMenu == null) optionsMenu = root.Q<VisualElement>("OptionsMenu");
         if (aboutMenu == null) aboutMenu = root.Q<VisualElement>("AboutMenu");
+        if (startSubmenu == null) startSubmenu = root.Q<VisualElement>("StartSubmenu");
 
         // --- Bind Start Menu buttons ---
-        BindButton(startMenu, "StartButton", OnStartClicked);
+        BindButton(startMenu, "StartButton", evt => ShowMenu(startSubmenu));
         BindButton(startMenu, "OptionsButton", evt => ShowMenu(optionsMenu));
         BindButton(startMenu, "AboutButton", evt => ShowMenu(aboutMenu));
         BindButton(startMenu, "QuitButton", OnQuitClicked);
+
+        // --- Start Submenu ---
+        BindButton(startSubmenu, "Level1", evt => SceneManager.LoadScene(1));
+        BindButton(startSubmenu, "Level2", evt => SceneManager.LoadScene(4));
+        BindButton(startSubmenu, "Back", evt => ShowMenu(startMenu));
 
         // --- Options Menu ---
         BindButton(optionsMenu, "OptionsBackButton", evt => ShowMenu(startMenu));
@@ -314,19 +326,17 @@ public class MenuManager : MonoBehaviour
         if (startMenu != null) startMenu.style.display = DisplayStyle.None;
         if (optionsMenu != null) optionsMenu.style.display = DisplayStyle.None;
         if (aboutMenu != null) aboutMenu.style.display = DisplayStyle.None;
+        if (startSubmenu != null) startSubmenu.style.display = DisplayStyle.None;
 
         if (menuToShow != null)
             menuToShow.style.display = DisplayStyle.Flex;
-    }
 
-    private void OnStartClicked(ClickEvent evt)
-    {
-        int current = SceneManager.GetActiveScene().buildIndex;
-        int next = current + 1;
-        if (next < SceneManager.sceneCountInBuildSettings)
-            SceneManager.LoadScene(next);
-        else
-            Debug.LogWarning("No next scene found in Build Settings.");
+        if (menuToShow == startSubmenu)
+        {
+            bool unlockedLevel2 = PlayerPrefs.GetInt("UnlockedLevel2", 0) == 1;
+            if (!unlockedLevel2) startSubmenu.Q<Button>("Level2").style.display = DisplayStyle.None;
+            else startSubmenu.Q<Button>("Level2").style.display = DisplayStyle.Flex;
+        }
     }
 
     private void OnQuitClicked(ClickEvent evt)

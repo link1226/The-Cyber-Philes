@@ -4692,6 +4692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartMenu
   uiDocument: {fileID: 985591384}
+  unlockedLevel2: 0
 --- !u!4 &1736040583
 Transform:
   m_ObjectHideFlags: 0

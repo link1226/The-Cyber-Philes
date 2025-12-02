@@ -49,6 +49,7 @@ public class CountdownTimer : MonoBehaviour
 
     void OnTimerEnd()
     {
-        SceneManager.LoadScene(3);
+        int current = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(current + 2);
     }
 }
