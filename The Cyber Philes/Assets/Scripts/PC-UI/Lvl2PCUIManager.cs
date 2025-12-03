@@ -32,19 +32,9 @@ public class Lvl2PCUIManager : MonoBehaviour
     [SerializeField] private UnityEvent onAccessGranted;
     public UnityEvent OnAccessGranted => onAccessGranted;
 
-    //[Header("Password Stength Checker Script")]
     private PasswordStrengthCheck passwordStrengthCheck = new PasswordStrengthCheck();
 
-    //private int PasswordStrengthCheck(string password)
-    //{
-    //    if (string.IsNullOrEmpty(password)) 
-    //        return 0;
-    //    if (password.Length < 6)
-    //        return 1;
-    //    if (password.Length < 8)
-    //        return 2;
-    //    return 3;
-    //}
+
 
     void Awake()
     {
@@ -188,19 +178,106 @@ public class Lvl2PCUIManager : MonoBehaviour
             case "2237": // TODO: Missing strength algorithm
                 root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("2200"));
 
+                //var set = root.Q<Button>("SetButton");
+                //var newp1 = root.Q<TextField>("PasswordField");
+                //var newp2 = root.Q<TextField>("PasswordFieldAgain");
+                //set.clicked += () =>
+                //{
+                //    if (newp1.value.Equals(newp2.value) && !newp1.value.Equals("")) 
+                //    {
+                //        LevelManager2.Instance.webPassword = newp1.value;
+                //        ShowScreen("2239"); // 2FA
+                //    }
+                //    else
+                //        //CHANGE THIS TO BE A BACKGROUND SWITCH
+                //        ShowScreen("2237"); // Mismatch
+                //};
+                //break;
+
                 var set = root.Q<Button>("SetButton");
-                var newp1 = root.Q<TextField>("PasswordField");
-                var newp2 = root.Q<TextField>("PasswordFieldAgain");
+                var np = root.Q<TextField>("PasswordField");
+                var npv = root.Q<TextField>("PasswordFieldAgain");
+
+                // This is the container that holds the background.
+                var bg = root.Q<VisualElement>("BackgroundPanel");
+
+                if (screenName == "2237")
+                {
+                    bg.style.backgroundImage = new StyleBackground(Resources.Load<Texture2D>("2237"));
+                }
+
+                string lastValue = "";
+
+                void UpdatePasswordStrengthUI()
+                {
+                    int strength = passwordStrengthCheck.CheckPasswordStrength(np.value);
+                    Debug.Log("Strength is " + strength);
+
+                    switch (strength)
+                    {
+                        case 1:
+                            // Weak → background 2234
+                            bg.style.backgroundImage = new StyleBackground(Resources.Load<Texture2D>("2234"));
+                            break;
+
+                        case 2:
+                            // Medium → background 2235
+                            bg.style.backgroundImage = new StyleBackground(Resources.Load<Texture2D>("2235"));
+                            break;
+
+                        case 3:
+                            // Strong → background 2236
+                            bg.style.backgroundImage = new StyleBackground(Resources.Load<Texture2D>("2236"));
+                            break;
+                    }
+                }
+
+                // --- PHYSICAL KEYBOARD ---
+                np.RegisterValueChangedCallback(evt => UpdatePasswordStrengthUI());
+
+                // --- VR SPATIAL KEYBOARD ---
+                np.RegisterCallback<InputEvent>(_ => UpdatePasswordStrengthUI());
+
+                // --- FALLBACK POLL (covers any missed updates)
+                root.schedule.Execute(() =>
+                {
+                    if (np.value != lastValue)
+                    {
+                        lastValue = np.value;
+                        UpdatePasswordStrengthUI();
+                    }
+                }).Every(10); // checks every 10ms, adjust if needed
+
+                // Initial background
+                UpdatePasswordStrengthUI();
+
                 set.clicked += () =>
                 {
-                    if (newp1.value.Equals(newp2.value) && !newp1.value.Equals("")) 
+                    int strength = passwordStrengthCheck.CheckPasswordStrength(np.value);
+
+                    // Passwords must match FIRST
+                    if (!np.value.Equals(npv.value))
                     {
-                        LevelManager2.Instance.webPassword = newp1.value;
-                        ShowScreen("2239"); // 2FA
+                        ShowScreen("2237");
+                        return;
                     }
-                    else
-                        ShowScreen("2237"); // Mismatch
+
+                    // Now strength decides what happens
+                    switch (strength)
+                    {
+                        case 1: // Weak
+                        case 2: // Medium
+                            ShowScreen("2233");
+                            break;
+
+                        case 3: // Strong
+                                // Accept new password
+                            LevelManager2.Instance.webPassword = np.value;
+                            ShowScreen("2239");
+                            break;
+                    }
                 };
+
                 break;
 
             case "2238": // No auth

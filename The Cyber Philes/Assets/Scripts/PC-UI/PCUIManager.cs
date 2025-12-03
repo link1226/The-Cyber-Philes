@@ -161,8 +161,7 @@ public class UIScreenManager : MonoBehaviour
                 var np = root.Q<TextField>("NewPasswordField");
                 var npv = root.Q<TextField>("NewPasswordVerifyField");
 
-                // This is the container that holds your background.
-                // Change "BackgroundPanel" to the actual element name in your UXML.
+                // This is the container that holds the background.
                 var bg = root.Q<VisualElement>("BackgroundPanel");
 
                 string lastValue = "";
