@@ -4,6 +4,7 @@
         <ui:Button text="X" name="CloseButton" style="position: absolute; top: 46px; left: 734px; opacity: 0; height: 36px;" />
         <ui:Button text="X" name="GeorgeButton" style="position: absolute; top: 184px; left: 290px; opacity: 0; height: 38px; width: 482px;" />
         <ui:Button text="X" name="SoftwareButton" style="position: absolute; top: 200px; left: 131px; opacity: 0; height: 45px; width: 159px;" />
+        <ui:Button text="X" name="MarieButton" style="position: absolute; top: 225px; left: 291px; opacity: 0; height: 38px; width: 482px;" />
     </ui:VisualElement>
     <ui:Instance template="AdminDock" />
 </ui:UXML>
