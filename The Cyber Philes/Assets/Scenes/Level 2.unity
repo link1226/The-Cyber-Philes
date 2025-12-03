@@ -8995,6 +8995,21 @@ MonoBehaviour:
   - name: 2246
     asset: {fileID: 9197481963319205126, guid: e8028106821c24c42a3027fbffa2208a, type: 3}
   keyboardConnector: {fileID: 0}
+  onAccessGranted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2095609453}
+        m_TargetAssemblyTypeName: NavKeypad.SlidingDoor, Assembly-CSharp
+        m_MethodName: OpenDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &816179589 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7669732957663238096, guid: e6bec74b3d2659c45a9a9b0688e38c75, type: 3}
@@ -14129,6 +14144,9 @@ MonoBehaviour:
   - name: 2129
     asset: {fileID: 9197481963319205126, guid: 7015ac39b3bdd4b8da7024316116ed80, type: 3}
   keyboardConnector: {fileID: 0}
+  onAccessGranted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1388187616
 MonoBehaviour:
   m_ObjectHideFlags: 0

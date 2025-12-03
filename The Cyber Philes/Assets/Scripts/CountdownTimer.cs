@@ -4,6 +4,8 @@ using UnityEngine.UIElements;
 
 public class CountdownTimer : MonoBehaviour
 {
+
+    public static CountdownTimer Instance;
     [Tooltip("Countdown duration in seconds.")]
     public float startSeconds = 300f; // 5 minutes by default
 
@@ -12,6 +14,19 @@ public class CountdownTimer : MonoBehaviour
     private float timeRemaining;
     private Label timerLabel;
     private bool timerRunning = true;
+
+    void Awake()
+    {
+        // Ensure only one instance exists
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
@@ -51,5 +66,15 @@ public class CountdownTimer : MonoBehaviour
     {
         int current = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(current + 2);
+    }
+
+    public void SetTimeLeft(float seconds)
+    {
+        timeRemaining = seconds;
+    }
+
+    public void StopTimer()
+    {
+        timerRunning = false;
     }
 }

@@ -3,6 +3,9 @@ using UnityEngine.UIElements;
 using System.Collections.Generic;
 using Unity.Tutorials.Core.Editor;
 using System.Runtime.CompilerServices;
+using NavKeypad;
+using UnityEngine.Events;
+using System.Threading;
 
 
 
@@ -25,6 +28,9 @@ public class Lvl2PCUIManager : MonoBehaviour
 
     [Header("Keyboard Connector")]
     public UIToolkitKeyboardConnector keyboardConnector;
+    [Header("Events")]
+    [SerializeField] private UnityEvent onAccessGranted;
+    public UnityEvent OnAccessGranted => onAccessGranted;
 
     //[Header("Password Stength Checker Script")]
     private PasswordStrengthCheck passwordStrengthCheck = new PasswordStrengthCheck();
@@ -274,7 +280,8 @@ public class Lvl2PCUIManager : MonoBehaviour
                 var unlock = root.Q<Button>("UnlockButton");
                 unlock.clicked += () =>
                 {
-                    // TODO: UNLOCK DOOR HERE
+                    onAccessGranted?.Invoke();
+                    CountdownTimer.Instance.StopTimer();
                     ShowScreen("2245");
                 };
                 break;
@@ -324,7 +331,7 @@ public class Lvl2PCUIManager : MonoBehaviour
                 root.Q<Button>("CloseButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen("2200"));
                 root.Q<Button>("BackButton")?.RegisterCallback<ClickEvent>(_ => ShowScreen(LevelManager2.Instance.inboxStage));
 
-                // TODO: Set timer to 15s
+                CountdownTimer.Instance.SetTimeLeft(15f);
                 break;
         }
     }
