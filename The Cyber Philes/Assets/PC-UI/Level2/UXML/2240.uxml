@@ -1,0 +1,14 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="GeorgeDock" src="project://database/Assets/PC-UI/Level2/UXML/GeorgeDock.uxml?fileID=9197481963319205126&amp;guid=501ccc8a785334b9bbf1483d9f3f4d85&amp;type=3#GeorgeDock" />
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; flex-direction: row-reverse; background-image: url(&quot;project://database/Assets/PC-UI/Level2/Images/2240.png?fileID=2800000&amp;guid=fe8f5ff429c144ea3bdfc8e925c959e0&amp;type=3#2240&quot;); position: absolute; width: 800px; height: 600px; top: 0; left: 0;">
+        <ui:Button text="X" name="CloseButton" style="position: absolute; top: 59px; left: 700px; opacity: 0; height: 36px;" />
+        <ui:Button text="X" name="SecurityButton" style="position: absolute; top: 163px; left: 378px; opacity: 0; height: 29px; width: 191px;" />
+        <ui:Button text="X" name="SoftwareButton" style="position: absolute; top: 219px; left: 177px; opacity: 0; height: 44px; width: 542px;" />
+        <ui:Button text="X" name="NetworkButton" style="position: absolute; top: 263px; left: 177px; opacity: 0; height: 51px; width: 542px;" />
+        <ui:Button text="X" name="PasswordButton" style="position: absolute; top: 313px; left: 177px; opacity: 0; height: 51px; width: 542px;" />
+        <ui:Label text="Done" name="SoftwareDone" style="position: absolute; top: 227px; left: 646px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Source_Code_Pro/static/SourceCodePro-SemiBold.ttf?fileID=12800000&amp;guid=5f0e9c5746d924bfaa3d4afb104a8240&amp;type=3#SourceCodePro-SemiBold&quot;); font-size: 18px; color: rgb(34, 139, 34); visibility: visible; display: flex;" />
+        <ui:Label text="Done" name="NetworkDone" style="position: absolute; top: 274px; left: 646px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Source_Code_Pro/static/SourceCodePro-SemiBold.ttf?fileID=12800000&amp;guid=5f0e9c5746d924bfaa3d4afb104a8240&amp;type=3#SourceCodePro-SemiBold&quot;); font-size: 18px; color: rgb(34, 139, 34); visibility: visible;" />
+        <ui:Label text="Done" name="PasswordDone" style="position: absolute; top: 320px; left: 646px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Source_Code_Pro/static/SourceCodePro-SemiBold.ttf?fileID=12800000&amp;guid=5f0e9c5746d924bfaa3d4afb104a8240&amp;type=3#SourceCodePro-SemiBold&quot;); font-size: 18px; color: rgb(34, 139, 34); visibility: visible;" />
+    </ui:VisualElement>
+    <ui:Instance template="GeorgeDock" />
+</ui:UXML>

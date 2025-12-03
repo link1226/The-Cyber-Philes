@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="GeorgeDock" src="project://database/Assets/PC-UI/Level2/UXML/GeorgeDock.uxml?fileID=9197481963319205126&amp;guid=501ccc8a785334b9bbf1483d9f3f4d85&amp;type=3#GeorgeDock" />
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; flex-direction: row-reverse; background-image: url(&quot;project://database/Assets/PC-UI/Level2/Images/2253.png?fileID=2800000&amp;guid=09589d3c8dc6d45dfa6b6ee26fd48389&amp;type=3#2253&quot;); position: absolute; width: 800px; height: 600px; top: 0; left: 0;">
+        <ui:Button text="X" name="CloseButton" style="position: absolute; top: 59px; left: 660px; opacity: 0; height: 36px;" />
+        <ui:Button text="X" name="ResetButton" style="position: absolute; top: 200px; left: 195px; opacity: 0; height: 29px; width: 504px;" />
+        <ui:Button text="X" name="ScamButton" style="position: absolute; top: 227px; left: 195px; opacity: 0; height: 29px; width: 504px;" />
+    </ui:VisualElement>
+    <ui:Instance template="GeorgeDock" />
+</ui:UXML>

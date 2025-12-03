@@ -1,0 +1,3 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row-reverse; background-image: url(&quot;project://database/Assets/PC-UI/Level2/Images/2127.png?fileID=2800000&amp;guid=5789b869a984a453d9095d0a58c9ae59&amp;type=3#2127&quot;); position: absolute; width: 800px; height: 600px; top: 0; left: 0;" />
+</ui:UXML>

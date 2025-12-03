@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="GeorgeDock" src="project://database/Assets/PC-UI/Level2/UXML/GeorgeDock.uxml?fileID=9197481963319205126&amp;guid=501ccc8a785334b9bbf1483d9f3f4d85&amp;type=3#GeorgeDock" />
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; flex-direction: row-reverse; background-image: url(&quot;project://database/Assets/PC-UI/Level2/Images/2233.png?fileID=2800000&amp;guid=30539bab67835460b828343e3d6a7c76&amp;type=3#2233&quot;); position: absolute; width: 800px; height: 600px; top: 0; left: 0;">
+        <ui:Button text="X" name="CloseButton" style="position: absolute; top: 59px; left: 700px; opacity: 0; height: 36px;" />
+        <ui:Button text="X" name="SetButton" style="position: absolute; top: 405px; left: 326px; opacity: 0; height: 29px; width: 226px;" />
+        <ui:TextField password="true" name="PasswordFieldAgain" style="position: absolute; top: 341px; left: 183px; height: 40px; width: 367px;" />
+        <ui:TextField password="true" name="PasswordField" style="position: absolute; top: 276px; left: 183px; height: 40px; width: 367px;" />
+    </ui:VisualElement>
+    <ui:Instance template="GeorgeDock" />
+</ui:UXML>
